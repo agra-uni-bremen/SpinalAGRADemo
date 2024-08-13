@@ -1,0 +1,11 @@
+// Pseudocode of the Euclids algorithm for calculating the GCD
+inputs:  [a, b]
+outputs: [ready, a]
+ready := False
+while(!ready):
+  if(a > b):
+    a := a - b
+  else if(b > a):
+    b := b - a
+  else:
+    ready := True
