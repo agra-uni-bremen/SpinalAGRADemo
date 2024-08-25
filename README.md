@@ -9,7 +9,8 @@ SpinalAGRADemo
 │   │   ├── fsmdemo
 │   │   ├── projectname
 │   │   ├── regdemo
-│   │   └── sineromdemo
+│   │   ├── sineromdemo
+│   │   └── adder 
 │   ├── verilog
 │   └── vhdl
 ├── project
@@ -38,10 +39,17 @@ sbt:projectname>
 2. The command `show discoveredMainClasses` can show the available runnable parts of this repository:
 
 ```bash
+[...]
 sbt:projectname> show discoveredMainClasses
 [info] compiling 2 Scala sources to /home/sallar/work/SpinalAGRADemo/target/scala-2.12/classes ...
+[info] * adders.AddersSim
+[info] * adders.AddersVerilog
+[info] * adders.RCAVerilog
 [info] * fsmdemo.FSMDemoSim
 [info] * fsmdemo.FSMDemoVerilog
+[info] * gcd.GCDCtrlVerilog
+[info] * gcd.GCDTopSim
+[info] * gcd.GCDTopVerilog
 [info] * projectname.MyTopLevelFormal
 [info] * projectname.MyTopLevelSim
 [info] * projectname.MyTopLevelVerilog
@@ -50,7 +58,7 @@ sbt:projectname> show discoveredMainClasses
 [info] * regdemo.RegDemoVhdl
 [info] * sineromdemo.SineRomDemoSim
 [info] * sineromdemo.SineRomDemoVerilog
-[success] Total time: 4 s, completed 24.07.2024, 13:22:42
+[...]
 ```
 
 3. We can now use the command `runMain` to execute one of those targets. For example `regdemo.RegDemoVerilog`:
